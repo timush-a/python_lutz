@@ -1,21 +1,26 @@
 class Super:
     def method(self):
-        print('in Super.method')            # Поведение по умолчанию
+        # Поведение по умолчанию
+        print('in Super.method')
 
     def delegate(self):
-        self.action()                       # Ожидаемый метод
+        # Ожидаемый метод
+        self.action()
 
 
-class Inheritor(Super):                     # Наследует методы без изменений
+class Inheritor(Super):
+    # Наследует методы без изменений
     pass
 
 
-class Replacer(Super):                      # Полностью замещает метод
+class Replacer(Super):
+    # Полностью замещает method
     def method(self):
         print('in Replacer.method')
 
 
 class Extender(Super):
+    # Расширяет поведение метода method
     def method(self):
         print('starting Extender.method')
         Super.method(self)
@@ -23,6 +28,7 @@ class Extender(Super):
 
 
 class Provider(Super):
+    # Определяет необходимый метод
     def action(self):
         print('in Provider.action')
 
