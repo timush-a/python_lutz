@@ -18,10 +18,13 @@ class Person:
 
 bob = Person('Bob Smith') 
 print(bob.name)
+
 bob.name = 'Robert Smith'
 print(bob.name)
+
 del bob.name
 print('-' * 20)
+
 sue = Person('Sue Jones')
 print(sue.name)
 print(Person.name.__doc__)
